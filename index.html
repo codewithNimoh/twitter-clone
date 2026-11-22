@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Twitter Clone</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+  <base target="_blank">
+</head>
+<body>
+
+<div class="app">
+  <nav class="sidebar">
+    <button class="nav-item active" data-view="home">
+      <span class="dot" style="background:var(--blue)"></span>Home
+    </button>
+
+    <button class="nav-item" data-view="profile">
+      <span class="dot" id="profileDot"></span>Profile
+    </button>
+
+    <button class="nav-item" data-view="ask">
+      <span class="dot" style="background:#7856ff"></span>Ask AI
+    </button>
+  </nav>
+
+  <main class="main" id="main"></main>
+
+  <aside class="right">
+    <div class="who-card">
+      <h2>Who to follow</h2>
+      <div id="whoToFollow"></div>
+    </div>
+  </aside>
+</div>
+
+<nav class="bottombar">
+  <button class="nav-item active" data-view="home">
+    <span class="dot" style="background:var(--blue)"></span>Home
+  </button>
+
+  <button class="nav-item" data-view="profile">
+    <span class="dot" id="profileDotM"></span>Profile
+  </button>
+
+  <button class="nav-item" data-view="ask">
+    <span class="dot" style="background:#7856ff"></span>Ask AI
+  </button>
+</nav>
+
+<button class="ai-fab" id="aiFab">AI</button>
+
+<div class="ai-panel hidden" id="aiPanel">
+  <div class="ai-header">
+    <h3>Ask AI</h3>
+    <div>
+      <button id="aiKeyBtn" title="Set your OpenRouter API key">Key</button>
+      <button id="aiClose">Close</button>
+    </div>
+  </div>
+
+  <div class="ai-messages" id="aiMessages"></div>
+
+  <div class="ai-input">
+    <input id="aiInput" type="text"
+      placeholder="Ask about any post" maxlength="2000">
+    <button id="aiSend">Send</button>
+  </div>
+</div>
+
+</body>
+</html>
